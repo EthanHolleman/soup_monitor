@@ -35,7 +35,7 @@ def main():
                                      args.reciever_address)
                         cooldown = time.time()
             
-            cur_temp = 80 get_temp(args.dev_file)
+            cur_temp = get_temp(args.dev_file)
             if cur_temp < 90:
                 if abs(cooldown - time.time()) > args.cooldown_time:
                     message = 'Pot is not boiling!'
@@ -62,3 +62,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
